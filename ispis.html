@@ -1,0 +1,27 @@
+<form>
+    <div class="row">
+            <div class="col-lg-8">
+                <div class="form-group">
+                    <input ng-model="vm.ulaz" class="form-control submit">
+                </div>
+            </div>
+                <div class="col-lg-2">
+                    <button type="submit" ng-click="vm.add()" class="dodavanje btn btn-success">Unesi</button>
+                </div>
+    </div>
+ </form>
+
+
+
+<div class="row">
+    <div ng-repeat="list in vm.lists">
+        <div class="col-lg-8">
+        <td >
+            <span>{{list.text}}</span> <!--list.name je na online serveru-->
+        </td>
+        </div>    
+        <div class="col-lg-2 brisanje">
+            <button type="submit" ng-click="vm.remove($index,list.id)" class="btn btn-danger">Obriši</button> 
+        </div>
+    </div>
+</div>
